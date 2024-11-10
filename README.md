@@ -15,3 +15,23 @@ the function and run automatically when you commit through a GitHub action.
 
 What is the worst-case big $\Theta$ complexity of your implementation? Add your
 answer, including your reasoning, to this markdown file.
+
+## Answer
+
+**checkPath()**: 
+
+This function, in the worst case, will visit each vertex once. If we have V vertices and E edges, each vertex and its following edges will be explored recursively. This leads to $\Theta (V+E)$ time.
+
+**hasCycle()**: 
+
+This function in the worst case will iterate over every node in the graph. For each node that is *unexplored*, **checkPath()** is called. This leads a time of $\Theta (V) + \Theta (V+E) $.
+
+**Final Complexity**
+
+I can show that $\Theta(V) + \Theta (V+E) ∈ \Theta(V+E)$
+
+## Sources
+
+Viewed Caden's repository to see a different way of solving the problem: https://github.com/COSC3020/detecting-cycles-cadenmcfate/blob/main/code.js
+
+Slide #27 of the graphs lecture for DFS related information.
